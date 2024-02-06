@@ -1,0 +1,9 @@
+@baseUrl = http://localhost:3333
+
+###
+POST {{baseUrl}}/polls
+Content-Type: application/json
+
+{
+  "title": "Testando a enquete"
+}
