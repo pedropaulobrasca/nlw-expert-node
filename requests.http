@@ -1,9 +1,21 @@
 @baseUrl = http://localhost:3333
 
-###
+### Create Poll
 POST {{baseUrl}}/polls
 Content-Type: application/json
 
 {
-  "title": "Testando a enquete"
+  "title": "Qual o melhor framework Node.JS?",
+  "options": ["Express", "Fastify", "NestJS"]
+}
+
+### Get Poll
+GET {{baseUrl}}/polls/61b31c05-9b22-4513-8f53-772ca3f1b3b3
+
+### Vote On Poll
+POST {{baseUrl}}/polls/61b31c05-9b22-4513-8f53-772ca3f1b3b3/votes
+Content-Type: application/json
+
+{
+  "pollOptionId": "ded5d639-4319-49a9-9974-c371c5c724a4"
 }
